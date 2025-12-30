@@ -28,34 +28,48 @@ public void mt_getResult(){
 }
 ```
 
-若要於內文中標示部分網頁檔，則使用以下標籤` ```html 程式碼 ``` `，
-下段程式碼則為使用後結果：
-
-```html
-<%@ Page Language="C#" AutoEventWireup="true" ...>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" ...>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
-```
-更多markdown方法可參閱[https://ithelp.ithome.com.tw/articles/10203758](https://ithelp.ithome.com.tw/articles/10203758)
-
-請在撰寫"說明程式與內容"該塊內容，請把原該塊內上述敘述刪除，該塊上述內容只是用來指引該怎麼撰寫內容。
 
 1. HTTP Status Code 有哪些？怎麼分類？
 
 Ans:
+
+HTTP 狀態碼的五大分類
+1xx (Informational) — 資訊回應
+範圍: 100-199
+涵義: 請求已接收，正在處理中，需要客戶端繼續操作。
+常見範例: 100 Continue (繼續)，表示伺服器已收到請求的頭部，客戶端應繼續發送請求主體。
+
+2xx (Successful) — 成功回應
+範圍: 200-299
+涵義: 請求已成功被伺服器接收、理解和處理。
+常見範例:
+200 OK：請求成功，返回請求的資源。
+201 Created：請求成功且資源已建立。
+204 No Content：請求成功，但伺服器不返回任何內容。
+
+3xx (Redirection) — 重新導向
+範圍: 300-399
+涵義: 完成請求需要客戶端進一步執行操作，例如跳轉到新的 URL。
+常見範例:
+301 Moved Permanently：資源永久移動到新 URL。
+302 Found：資源臨時移動到新 URL。
+304 Not Modified：資源未修改，使用緩存。
+
+4xx (Client Error) — 客戶端錯誤
+範圍: 400-499
+涵義: 請求包含錯誤語法或無法完成（如未找到資源、未授權）。
+常見範例:
+400 Bad Request：請求有誤。
+401 Unauthorized：未經授權。
+403 Forbidden：禁止訪問。
+404 Not Found：找不到資源。
+
+5xx (Server Error) — 伺服器端錯誤
+範圍: 500-599
+涵義: 伺服器在處理有效請求時發生錯誤。
+常見範例:
+500 Internal Server Error：伺服器內部錯誤。
+503 Service Unavailable：服務暫時不可用。 
 
 
 2. 在 Express 中，設計基本上可以分成幾層？請依上述回答實作一個後端與前端的網站(需有程式碼)，並且將結果和執行畫面顯示於該份md，並逐步說明。
